@@ -1,0 +1,15 @@
+name = "jobfinder-itjobs-api"
+main = "src/worker/index.ts"
+compatibility_date = "2026-10-26"
+workers_dev = false
+
+[secrets]
+required = ["ITJOBS_API_KEY"]
+
+# Access and origin values must be configured only after an Access application is approved.
+# No concrete team, audience, origin, secret, route, or public workers.dev URL is configured here.
+
+[[ratelimits]]
+name = "SEARCH_LIMITER"
+namespace_id = "842301" # Placeholder; confirm this ID is unused in the Cloudflare account before binding it.
+simple = { limit = 20, period = 60 }

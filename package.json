@@ -1,0 +1,21 @@
+{
+  "name": "jobfinder",
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "tsx --test tests/demo-reset.test.ts tests/dashboard-summary.test.ts tests/opportunity-archive.test.ts tests/profile-storage.test.ts tests/opportunity-search.test.ts tests/opportunity-storage.test.ts tests/itjobs-source.test.ts tests/worker-itjobs.test.ts tests/cloudflare-access-auth.test.ts"
+  },
+  "dependencies": {
+    "astro": "^7.4.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+---
+import { navItems } from '../data';
+import Icon from './Icon.astro';
+const { current = '/' } = Astro.props;
+---
+<aside class="sidebar" id="sidebar">
+<a class="brand" href="/myjobs/"><span class="brand-mark">▦</span><span>MyJobs<span class="brand-period">.</span></span></a>
+<div class="workspace-label">ESPAÇO PESSOAL <i></i></div>
+<nav class="main-nav" aria-label="Navegação principal">{navItems.map((item)=><a class:list={['nav-link',{active:current===item.href}]} href={"/myjobs"+item.href}><Icon name={item.icon}/><span>{item.label}</span>{item.label==='Assistente IA'&&<small>BREVEMENTE</small>}</a>)}</nav>
+<div class="sidebar-bottom"><div class="sidebar-note"><div class="note-icon"><Icon name="sparkles" size={16}/></div><strong>O próximo passo começa aqui.</strong><p>Organize a sua procura, ao seu ritmo.</p><div class="note-progress"><i></i></div><small>PERFIL <b>DEMONSTRATIVO</b></small></div><div class="sidebar-user"><div class="avatar">JF</div><div><strong>Perfil de exemplo</strong><span>Espaço demonstrativo</span></div><span class="user-dots">···</span></div></div>
+</aside>

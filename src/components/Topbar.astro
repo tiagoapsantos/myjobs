@@ -1,0 +1,4 @@
+---
+import Icon from './Icon.astro'; const {breadcrumb='Dashboard'}=Astro.props;
+---
+<header class="topbar"><button class="mobile-menu" aria-label="Abrir navegação" data-menu-toggle><Icon name="menu"/></button><div class="topbar-crumb"><span>Workspace</span><Icon name="chevron" size={14}/><strong>{breadcrumb}</strong></div><div class="topbar-actions"><div class="global-search" aria-label="Pesquisa global demonstrativa"><Icon name="search" size={17}/><span>Pesquisar</span><kbd>⌘ K</kbd></div><button class="icon-button" aria-label="Notificações, demonstrativo"><Icon name="bell" size={19}/><i></i></button><span class="topbar-divider"></span><div class="top-profile"><div class="avatar avatar-top">JF</div><span>Visitante</span><span>⌄</span></div></div></header>

@@ -1,0 +1,11 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+---
+<AppLayout title="Oportunidades guardadas" current="/guardadas/">
+<h1>Oportunidades guardadas</h1><p>Arquivo local de oportunidades. Os exemplos fictícios são identificados em cada anúncio. Sem envio de candidaturas ou sincronização entre dispositivos.</p>
+<a class="button button-primary" href="/myjobs/procurar/">Procurar oportunidades</a><a class="button button-outline" href="/myjobs/candidaturas/">Gerir candidaturas</a>
+<label class="profile-field">Pesquisar<input id="archive-query" type="search" /></label>
+<label class="profile-field">Ordenar<select id="archive-sort"><option value="updated">Actualização mais recente</option><option value="title">Título</option><option value="date">Data do anúncio</option></select></label>
+<div id="archive-feedback" role="status" aria-live="polite"></div><div id="archive-results" class="opportunity-results"></div>
+<script src="../../scripts/archive-page.ts"></script>
+</AppLayout>

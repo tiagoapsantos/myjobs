@@ -1,0 +1,4 @@
+---
+const {eyebrow,title,description,action=''}=Astro.props;
+---
+<div class="page-heading"><div><div class="eyebrow"><span></span>{eyebrow}</div><h1>{title}</h1><p>{description}</p></div>{action&&<a class="button button-primary" href="/myjobs/procurar/">{action} <span>↗</span></a>}</div>
